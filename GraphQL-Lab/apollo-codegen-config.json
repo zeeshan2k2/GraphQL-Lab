@@ -1,0 +1,38 @@
+{
+  "schemaNamespace": "GraphQLSchema",
+  "input": {
+    "operationSearchPaths": ["GraphQL/**/*.graphql"],
+    "schemaSearchPaths": ["GraphQL/**/*.graphqls"]
+  },
+  "output": {
+    "schemaTypes": {
+      "path": "./GraphQL/Schema",
+      "moduleType": {
+        "embeddedInTarget": {
+          "name": "GraphQL-Lab"
+        }
+      }
+    },
+    "operations": {
+      "inSchemaModule": {}
+    },
+    "testMocks": {
+      "none": {}
+    }
+  },
+  "schemaDownloadConfiguration": {
+    "downloadMethod": {
+      "introspection": {
+        "endpointURL": "https://countries.trevorblades.com/",
+        "httpMethod": {
+          "POST": {}
+        },
+        "includeDeprecatedInputValues": false,
+        "outputFormat": "SDL"
+      }
+    },
+    "downloadTimeout": 60,
+    "headers": [],
+    "outputPath": "./GraphQL/schema.graphqls"
+  }
+}
